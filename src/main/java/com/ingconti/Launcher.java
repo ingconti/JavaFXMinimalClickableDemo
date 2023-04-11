@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.ingconti;
 
 public class Launcher {
 
