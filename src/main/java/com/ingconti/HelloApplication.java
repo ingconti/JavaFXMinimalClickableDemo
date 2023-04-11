@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.ingconti;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,6 +18,22 @@ public class HelloApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        /*
+        for (String arg: args) {
+            System.out.println(arg);
+        }
+        */
+        if (args.length > 0) {
+            String param0 = args[0];
+            if (param0.equals( "--server") )
+                runAsServer();
+        }else {
+            launch();
+        }
     }
+
+    static void runAsServer(){
+        System.out.println("started as server.. bye!");
+    }
+
 }
